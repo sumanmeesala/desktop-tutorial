@@ -1,0 +1,26 @@
+pipeline
+{
+    agent any
+    environment
+{
+PATH = /opt/apache-maven-3.9.1/bin:$PATH
+}
+    stages
+    {
+        stage('clone')
+        {
+            steps
+            {
+            git branch: 'main', credentialsId: 'de483556-b2e7-48c1-bfac-1b8a5b0a6651', url: 'https://github.com/sumanmeesala/desktop-tutorial.git'
+            }
+        }
+        stage('build')
+        {
+            steps
+            {
+            sh "mvn clean install"
+            }
+        }
+      
+    }
+}
