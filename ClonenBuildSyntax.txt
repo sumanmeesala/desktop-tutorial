@@ -20,7 +20,7 @@ pipeline
         {
             steps
             {
-            emailext body: 'It\'s working', subject: 'Test email from Jenkins', to: 'smeesala@csod.com'
+            emailext body: 'It\'s Worked...', subject: 'Test mail from jenkins', to: 'smeesala@csod.com, mmeesala@csod.com'
             }
         }
       
