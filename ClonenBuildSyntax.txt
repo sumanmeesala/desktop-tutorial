@@ -4,9 +4,12 @@ pipeline
  
     stages
     {
-        environment
+        stage('env')
         {
+            environment
+            {
             PATH = "C:/apache-maven-3.9.1-bin/apache-maven-3.9.1/bin:$PATH"
+            }
         }
         stage('clone')
         {
