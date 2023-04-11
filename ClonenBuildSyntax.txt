@@ -20,7 +20,7 @@ pipeline
         {
             steps
             {
-            sh "mvn clean install"
+            sh "C:/tools/apache-maven-3.8.2/bin/mvn clean install"
             }
         }
       
