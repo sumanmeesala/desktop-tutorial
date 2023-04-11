@@ -1,0 +1,23 @@
+pipeline
+{
+    agent any
+
+    stages
+    {
+        stage('clone')
+        {
+            steps
+            {
+            git branch: 'main', credentialsId: 'de483556-b2e7-48c1-bfac-1b8a5b0a6651', url: 'https://github.com/sumanmeesala/desktop-tutorial.git'
+            }
+        }
+        stage('build')
+        {
+            steps
+            {
+            sh "mvn clean install"
+            }
+        }
+      
+    }
+}
