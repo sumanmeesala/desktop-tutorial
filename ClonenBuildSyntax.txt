@@ -20,7 +20,7 @@ pipeline
         {
             steps
             {
-            mvn -version
+            emailext body: 'It\'s working', subject: 'Test email from Jenkins', to: 'smeesala@csod.com'
             }
         }
       
