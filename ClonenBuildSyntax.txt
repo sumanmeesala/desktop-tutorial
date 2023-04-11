@@ -20,7 +20,7 @@ pipeline
         {
             steps
             {
-            sh "echo build_Success"
+            echo "Build Success"
             }
         }
       
